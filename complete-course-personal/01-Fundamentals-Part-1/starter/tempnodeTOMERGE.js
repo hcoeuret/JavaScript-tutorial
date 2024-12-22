@@ -70,5 +70,56 @@ const value = prompt("text_to_prompt"); //return a string
 || //OR
 ! //NOT
 
+//switch statement 
+//comparison between variable and case are strict equality (variable === firstcase)
+switch(variable){
+    case 'firstcase':
+    //do stuff
+    break;
+    case 'secondcase':
+    case 'thirdcase':
+    //do more stuff
+    break;
+    default:
+    //do stuff
+};
+
+//statement vs expressions
+expressions -> produce a value
+3+4 is a expressions
+statement -> perform an action
+if/else is a statements
+const = 3 + 4 is a statements
+
+//for example in template litteral we can only put expressions not statement
+`I'm ${89-23} years old` //is ok
+`I'm ${if(89-23)}` //not ok
+
+//ternary operator (conditional operator) can be used in template literal ! (because it is an operator so it is an expression)
+const personType = age > 18 ? "adult" : "kiddo"; //return adult or kiddo according to condition
+
+//javascript history
+was invented by Netscape and standardized by ECMA in 1997
+ECMAScript is the standard, javascript the language in practice
+ES6 released in 2015
+
+//javascript backward compatibility
+Javascript code of ES1 still works with ES6 web browser 
+core principle = don't break the web !
+old feature are never removed to make all website works
+
+//javascript forward compatibility
+old browser will not work with new website
+
+//how to code a javascript web app
+During dev use the latest google chrome
+During production you can use Babel to transpile and polyfill code to ensure compatibility with old browser and ES5
+ES5 is safe for all browsers
+ES6+ (ES2015 to ES2020) only supported by modern browser
+ESNext(ES2021 - now) implemented in some modern browser but not safe to use
+
+
+
+
 
 

@@ -101,5 +101,22 @@ else{
 const favorite = prompt("What is your favorite number ?");
 console.log(favorite);
 */
+const variable = 'secondcase';
+
+switch(variable){
+    case 'firstcase':
+    console.log('firstcase')
+    break;
+    case 'secondcase':
+    case 'thirdcase':
+    console.log('restofloggs')
+    break;
+    default:
+    //do stuff
+};
+
+const age = 19;
+const personType = age > 18 ? "adult" : "kiddo"; //return adult or kiddo according to condition
+console.log(personType);
 
 
