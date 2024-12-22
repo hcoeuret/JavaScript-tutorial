@@ -118,8 +118,43 @@ ES5 is safe for all browsers
 ES6+ (ES2015 to ES2020) only supported by modern browser
 ESNext(ES2021 - now) implemented in some modern browser but not safe to use
 
+//strict mode (more safe code) has to be the very first line of code beside comment
+'use strict';
+- error when assining a undeclared variable;
+- error when using a word that is a language keyword
+- etc 
 
+//FUNCTIONS
+//there are three type of syntax, declaration or expression. You can use one or the other depending on what you prefer
 
+/*function declaration
+parameter is the placeholder, argument is the actual value (here 15 is argument)
+Can be called before being declared
+*/
+function logger(parameter1,parameter2){
+    //code
+    return 10;
+};
+logger(15, 20);
 
+/*function expression
+cannot be used before being declared
+*/
+const logger2 = function (parameter1, parameter2){
+    //code
+    return 20;
+};
+logger2(15, 20);
 
-
+/*Arrow function
+works the same as expression function, but with syntax perfect for simple one line function. 
+arrow function does not get a this keyword unlike the other functions
+*/
+//one line arrow function
+const logger3 = parameter1 => 2037 - parameter1;
+logger3(argument1);
+//more complex arrow function
+const logger4 = (parameter1, parameter2) => {
+    const var1 = parameter1 - parameter2;
+    return var1;
+}
