@@ -158,3 +158,147 @@ const logger4 = (parameter1, parameter2) => {
     const var1 = parameter1 - parameter2;
     return var1;
 }
+
+/*Arrays 
+2 ways of initializing. Note : you can declare array with const and change particular values but you cannot change the whole array at the same type
+You can also create an array containing multiple differrent types
+array are built in objects
+*/
+const friends = [1920 -500, function1(variable1), "Michal"]; //this one is more usual
+const year = new Array(1991, 1984, 2008, 2020); //this one works but less used
+const friends = [] //empty array 
+friends[0]; //access array element 0
+friends.length; //return size of array (property of array)
+friends[0] = 'Jay'; //write value
+friends.push('Bob'); //push value at the end of the array and return length of new array
+friends.unshift('john') //push value at the beginning and return length of array
+const popped = friends.pop();//remove last element of array and returns it
+const popped = friends.shift(); //remove first element
+friends.indexOf('Bob'); //return index of element if exist, -1 if not found
+friends.includes('bob'); //return true if found, false if not (strict equality)
+
+/*Objects
+function are a list of key - value pair
+size, name and id are called properties
+they are multiple ways of creating objects
+to write a function in an object you need to use an expression not declaration, because object works with expressions
+this return the called object 
+*/
+//object litteral
+const object1 = {
+    size : 10,
+    name : "foo",
+    id : 101,
+    isValid : true
+    calcSize : function (){
+        return 2023 - this.size;
+    }
+};
+object1.id //get id from object1
+object1['i' + 'd'] //get id from object1, can be any expression inside the brackets. return undefined if does not exist (falsy value)
+const choice prompt("choose id or age");
+object1[choice]; //to do dynamic choosing
+object1.location = 'France'; //Add new property
+object1['social'] = "twitter"; //Add new property
+object1.calcSize() //call function
+
+//for loop
+for(let i = 1; let < 10; i++){
+    //code
+    continue; //skip to the next iteration
+    break; //exit the loop
+};
+
+//while loop
+let dice = Math.trunc(Math.random() * 6) + 1
+while(dice !== 6){
+    dice = Math.trunc(Math.random() * 6) + 1
+    console.log(dice);
+};
+
+
+//random numbers
+Math.random //return random number between 0 and 1
+
+//interesting extension
+prettier //for automatic formating (change options in vscode as well)
+settings sync in VS code
+TODO highlight //to highlight todo
+
+//to have live changes
+method 1 : live server extension
+method 2 : install node.js and execute "npm install live-server -g" then "live-server"
+
+//console.table(object)
+return the object in the console in a table
+
+//debugger
+debugger; //open the debugger when the program arrives here in the code
+
+//html font-size
+to have consistent font size, you can define a font size in the html style like
+font-size : 62.5%; //62.5% of default 16px = 10px
+then in the other styles you put
+font-size : 1rem //1times the font size of root element html
+font-size : 0.8em //0.8 times the font size of the parent element
+
+//html classes
+div class="modal hidden"//the div has two classes, modal and hidden, and you can add style in .modal and in .hidden separately. The two classes are stored in a classList
+
+
+//id vs class
+id is unique compared to classs which are grouped element
+used a lot with javascript to target a scpecific element
+class="myClass"
+.myClass //class in css and javascript
+id="myId"
+#myId //id in CSS and javascript
+
+//DOM
+Document object Model = structured representation of html document
+connexion point between html and javascript
+it is a tree structure generated from the html code
+Every element of a tree is a node, and child and parents are built from the code hierarchie
+Document is the first object and has html as child. It is the entry point of the DOM
+siblings = two childs with the same parent
+DOM is not part of javascript but part of Web API that we can use in javascript
+
+//select html element 
+const message = document.querySelector(".message"); //#message with id
+document.querySelector(".message").textContent = 23 ;//change the text content of html element 
+
+//event 
+document.querySelector(".check").addEventListener("click", function()) //listen for click event of the check button and run the function in the 2nd argument
+
+//change CSS style
+document.querySelector("body").style.backgroundColor = "#60b347"; //background-color becomes backgroundColor. The changed value needs to be a string. 
+//this does not change the CSS file but it is inline style
+
+/*
+queryselector selects single elements. If you target a class it will only select the first element of this class
+instead use this function. the return is a node list
+*/
+const btnOpenModal = document.querySelectorAll('.show-modal');
+for(let i = 0; i < btnOpenModal.length ; i++){
+    console.log(btnOpenModal[i].textContent);
+}
+
+//remove or add classes of html element, used all the time to make things go away and appear in html
+overlay.classList.remove('hidden'); //note it is 'hidden' not '.hidden'
+modal.classList.add('hidden');
+modal.classList.contains('hidden') //return true if contain is in the list of classes
+
+//global events (like keyboards presses). You listen for those wherever they happen so they are not bound to one unique element
+document.addEventListener('keydown', function);
+
+//event object, pass an argument of any name, javascript will put the event object inside. You can then manipulate the object to detect key press for example
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      hideModal();
+    }
+  });
+
+//three type of key press
+'keydown' //when the key is pressed down
+'keyup' //when the key is pressed up
+'keypress' //fires continusly while key is pressed
