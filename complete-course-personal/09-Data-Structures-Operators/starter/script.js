@@ -62,13 +62,85 @@ const restaurant = {
   }
 };
 
+/*
+const airlines = "Air France";
+const plane = "A320";
+
+console.log(airlines.slice(1, -2));
+
+airlines.toLowerCase();
+console.log(airlines);
+
+const a2 = airlines[0].toUpperCase() + airlines.slice(1).toLowerCase();//first letter uppercase
+console.log(a2);
+
+const email = "henricoeuret@gmail.com"
+
+const bademail = "  HenriCoeurEt@gmail.com  \n"
+
+const goodemail = bademail.toLowerCase().trim();
+console.log(goodemail);
+
+const priceFR = "288,,,97€"
+const priceUS = priceFR.replaceAll('€', "$").replaceAll(",",".");
+console.log(priceUS);
+const checkMiddleSeat = function (seat){
+  //B and E are middle seats
+  console.log(seat.slice(-1) === 'B' || seat.slice(-1) === 'E' );
+}
+
+const plane2 = "A320Neo"
+console.log(plane2.includes("A320"));
+
+checkMiddleSeat('11B')
+
+console.log('a+very+nice+string'.split('+'));
+const [firstName, LastName] = "Henri Coeuret".split(" ");
+console.log(firstName, LastName)
+
+console.log(["Mr", firstName, LastName].join(" "));
+
+const message = "Go to gate 23";
+console.log(message.padStart(25,"+"));
+
+const maskCreditCard = function(number){
+  const str = number + '';
+  console.log(str.slice(-4).padStart(25, "X"));
+}
+
+maskCreditCard("4333554684654321")
+
+const a3 = "bad weather... All Departures Delayed...."
+console.log(a3.repeat(5));
+
+
+
+const commonFoods = italianFoods.intersection(mexicanFoods);
+console.log(commonFoods);
+
+const question =new Map([
+  ['question', 'what is your name ?'],
+  [1, "Henri"],
+  [2, "Jon"],
+  [3, "Pierre"],
+  [true, 'Correct'],
+]);
+
+const italianMexicanFusion = italianFoods.union(mexicanFoods);
+console.log(italianMexicanFusion)
+
+
+const staff = ['Waiter', 'Cashier', 'Waiter', 'Manager', 'Chef', 'Cashier'];
+const staffunique = [...new Set(staff)];
+console.log(staffunique);
 
 
 const ordersSet = new Set(['pasta','pizza','risotto','pasta']);
+console.log(ordersSet.has('pizza'));
 console.log(ordersSet)
 
 
-/*
+
 if(restaurant.openingHours.mon.open){
   console.log(restaurant.openingHours.mon.open);
 }
